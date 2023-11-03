@@ -5,6 +5,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed;
+    public int lives;
+
+    public float invincibilityTime;
+    private bool invincible = false;
+
     private Vector2 movement;
 
     // Start is called before the first frame update
@@ -35,5 +40,28 @@ public class Player : MonoBehaviour
         }
 
         transform.Translate(movement.normalized * Time.deltaTime * speed);
+    }
+
+    public void TakeHit()
+    {
+        if (!invincible)
+        {
+            lives--;
+            if (lives <= 0)
+            {
+                //ToDo: GameOver einleiten
+            }
+            else
+            {
+                invincible = true;
+                StartCoroutine(InvincibilityCoro());
+            }
+        }
+    }
+
+    public IEnumerator InvincibilityCoro()
+    {
+        yield return new WaitForSecondsRealtime(invincibilityTime);
+        invincible = false;
     }
 }

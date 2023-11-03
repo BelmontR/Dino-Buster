@@ -9,6 +9,12 @@ public class GameManager : MonoBehaviour
     private int score;
     private string playerName;
 
+    public int maxEnemies;
+    public int maxItemsOnScreen;
+
+    public int currentEnemies;
+    public int currentItemsOnScreen;
+
     public Player player;
 
     // Start is called before the first frame update
