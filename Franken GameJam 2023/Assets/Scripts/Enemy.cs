@@ -34,6 +34,22 @@ public class Enemy : MonoBehaviour
         transform.Translate(movement * Time.deltaTime * stats.GetSpeed());
     }
 
+    public void TakeHit(float damage)
+    {
+        if(stats.TakeHit(damage))
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        //ToDo: Drop Drops
+        //ToDo: Todes-Animation
+        GameManager.instance.currentEnemies--;
+        Destroy(this.gameObject);     
+    }
+
     private class Stats
     {
         private float speed;
