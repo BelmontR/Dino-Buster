@@ -34,6 +34,6 @@ public class Player : MonoBehaviour
             movement += Vector2.right;
         }
 
-        transform.Translate(movement * Time.deltaTime * speed);
+        transform.Translate(movement.normalized * Time.deltaTime * speed);
     }
 }
