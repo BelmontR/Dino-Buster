@@ -10,16 +10,29 @@ public class Player : MonoBehaviour
     public float invincibilityTime;
     public bool invincible = false;
 
+    public GameObject axeController;
+    public GameObject slingShotController;
+    public GameObject spearController;
+    public GameObject clubController;
+
     private Vector2 movement;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        axeController.SetActive(false);
+        slingShotController.SetActive(true);
+        spearController.SetActive(false);
+        clubController.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
+    {
+
+    }
+
+    private void FixedUpdate()
     {
         movement = Vector2.zero;
         if ((Input.GetKey(KeyCode.W)))
@@ -34,7 +47,7 @@ public class Player : MonoBehaviour
         {
             movement += Vector2.down;
         }
-        if((Input.GetKey(KeyCode.D)))
+        if ((Input.GetKey(KeyCode.D)))
         {
             movement += Vector2.right;
         }
