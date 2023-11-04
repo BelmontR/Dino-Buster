@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SlingshotController : WeaponController
 {
+    public bool aimWithCursor;
+
     protected override void Start()
     {
         base.Start();
@@ -25,7 +27,21 @@ public class SlingshotController : WeaponController
         // Erzeuge das Projektil an der berechneten Spawn-Position
         GameObject spawnedSlingshot = Instantiate(prefab, spawnPosition, Quaternion.identity);
 
-        // Passe die Projektilrichtung an
-        spawnedSlingshot.GetComponent<SlingshotBehaviour>().DirectionChecker(playermovement.GetMovement());
+        if (!aimWithCursor)
+        {
+            // Passe die Projektilrichtung an
+            spawnedSlingshot.GetComponent<SlingshotBehaviour>().DirectionChecker(playermovement.GetMovement().normalized);
+        }
+        else
+        {
+            // Holen Sie sich die Position des Mauszeigers im Worldspace.
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            // Berechnen Sie die Richtung zum Mauszeiger.
+            Vector2 moveDirection = (mousePosition - transform.position).normalized;
+
+            spawnedSlingshot.GetComponent<SlingshotBehaviour>().DirectionChecker(moveDirection);
+
+        }
     }
 }

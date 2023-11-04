@@ -786,6 +786,7 @@ MonoBehaviour:
   frequency: 3
   cooldownDuration: 3
   pierce: 2
+  aimWithCursor: 0
 --- !u!1001 &1166490084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -866,7 +867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1243092650
 Transform:
   m_ObjectHideFlags: 0

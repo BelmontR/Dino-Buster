@@ -6,6 +6,9 @@ public class SlingshotBehaviour : ProjectileWeaponBehaviour
 {
     SlingshotController sshot;
     Enemy enemy;
+
+    public float speed = 30f;
+
     protected override void Start()
     {
          sshot = GetComponent<SlingshotController>();
@@ -18,12 +21,14 @@ public class SlingshotBehaviour : ProjectileWeaponBehaviour
     
     void Update()
     {
-        if(sshot != null)
-        {
-            transform.position += direction * sshot.frequency * Time.deltaTime; //Set the movement of the slingshot
-        }
+        //if(sshot != null)
+        //{
+            transform.Translate(direction * speed * Time.deltaTime); //Set the movement of the slingshot
+        Debug.Log(direction);
+        //}
     }
-    void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         // Überprüfe, ob das kollidierte Objekt einen Health- oder Damage-Controller hat
         enemy = collision.gameObject.GetComponent<Enemy>();
@@ -45,6 +50,6 @@ public class SlingshotBehaviour : ProjectileWeaponBehaviour
             // Zerstöre auch das Projektil
             Destroy(gameObject);
         }
-}
+    }
 
 }
