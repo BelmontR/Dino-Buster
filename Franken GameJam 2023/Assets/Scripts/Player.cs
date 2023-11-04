@@ -58,6 +58,15 @@ public class Player : MonoBehaviour
             movement += Vector2.right;
         }
 
+        if(movement == Vector2.zero)
+        {
+            GetComponent<Animator>().Play("Idle");
+        }
+        else
+        {
+            GetComponent<Animator>().Play("Walk");
+        }
+
         transform.Translate(movement.normalized * Time.deltaTime * speed);
     }
 
