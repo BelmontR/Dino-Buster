@@ -18,12 +18,12 @@ public class Enemy : MonoBehaviour
     public float dropRate;
     public GameObject drop;
 
+    public int scoreValue = 10;
+
     private Transform target;
 
     [SerializeField]
     private Rigidbody2D rb;
-    public UnityEvent OnBegin;
-    public UnityEvent OnDone;
 
     private bool blockMovement = false;
 
@@ -58,6 +58,8 @@ public class Enemy : MonoBehaviour
         //ToDo: Drop Drops
         //ToDo: Todes-Animation
         GameManager.instance.currentEnemies--;
+        GameManager.instance.AddToScore(scoreValue);
+        GameManager.instance.IncrementKilledEnemies();
         Destroy(this.gameObject);     
     }
 

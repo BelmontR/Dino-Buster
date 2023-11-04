@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     private int score;
-    private string playerName;
+    private int killedEnemies;
 
     public int maxEnemies;
     public int maxItemsOnScreen;
@@ -34,6 +34,11 @@ public class GameManager : MonoBehaviour
     public void AddToScore(int increment)
     {
         score += increment;
+    }
+
+    public void IncrementKilledEnemies()
+    {
+        killedEnemies++;
     }
 
 
