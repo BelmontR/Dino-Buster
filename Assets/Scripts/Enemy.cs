@@ -6,7 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed = 30;
-    public float hp;
+    public float hp = 10;
     public int strength;
 
     private Stats stats;
