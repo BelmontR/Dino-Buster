@@ -65,4 +65,9 @@ public class Player : MonoBehaviour
         yield return new WaitForSecondsRealtime(invincibilityTime);
         invincible = false;
     }
+
+    public Vector2 GetMovement()
+    {
+        return movement;
+    }
 }
