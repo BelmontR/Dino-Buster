@@ -11,6 +11,11 @@ public class DamageHitbox : MonoBehaviour
 
     public dmgHbStats stats;
 
+    private void Start()
+    {
+        stats = new dmgHbStats(strength, kbStrength, kbLength);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var enemy = collision.GetComponent<Enemy>();

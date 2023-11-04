@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67ef75d3c6ac5ac4ba6d594a4eba5a63, type: 3}
-  m_Name: Axe
+  m_Name: Spear
   m_EditorClassIdentifier: 
-  name: Axe
+  name: Spear
   image: {fileID: 0}

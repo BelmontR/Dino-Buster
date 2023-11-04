@@ -177,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2148032562725560166, guid: fdb82c31cb8fdfb4e9d657d9635116af, type: 3}
       propertyPath: m_Name
-      value: AxeHitBox (1)
+      value: AxeHitBox
       objectReference: {fileID: 0}
     - target: {fileID: 2148032562725560166, guid: fdb82c31cb8fdfb4e9d657d9635116af, type: 3}
       propertyPath: m_IsActive
@@ -2545,6 +2545,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxItemsCum: 0
   currentCum: 0
+  axe: {fileID: 0}
+  spear: {fileID: 0}
+  hammer: {fileID: 0}
+  ssc: {fileID: 0}
 --- !u!1001 &1331606587
 PrefabInstance:
   m_ObjectHideFlags: 0
