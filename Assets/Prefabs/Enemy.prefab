@@ -346,8 +346,8 @@ MonoBehaviour:
   hp: 5
   strength: 0
   sprite: {fileID: 8124846916860940830}
-  dropRate: 0
-  drop: {fileID: 0}
+  dropRate: 1
+  drop: {fileID: 6066276232935067404, guid: c26aca1741d63e2f5a4903672d129ef5, type: 3}
   scoreValue: 10
   rb: {fileID: 0}
 --- !u!95 &3159901020700329264
