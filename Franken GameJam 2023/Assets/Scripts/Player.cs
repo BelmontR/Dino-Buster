@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public int lives;
 
     public float invincibilityTime;
-    private bool invincible = false;
+    public bool invincible = false;
 
     private Vector2 movement;
 
@@ -47,6 +47,7 @@ public class Player : MonoBehaviour
         if (!invincible)
         {
             lives--;
+            UIManager.instance.RemoveHeart();
             if (lives <= 0)
             {
                 //ToDo: GameOver einleiten
@@ -69,5 +70,14 @@ public class Player : MonoBehaviour
     public Vector2 GetMovement()
     {
         return movement;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        var enemy = collision.gameObject.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            TakeHit();
+        }
     }
 }
