@@ -9,6 +9,8 @@ public class UIInventorySlot : MonoBehaviour
     public TextMeshProUGUI count;
     public Image image;
 
+    public Sprite emptyImage;
+
     public InventoryEntity item;
 
 

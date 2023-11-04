@@ -1066,6 +1066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count: {fileID: 858783205}
   image: {fileID: 1101143553}
+  emptyImage: {fileID: 21300000, guid: 41a8cedd65536fd4a884b4fdc7ae8fa1, type: 3}
   item: {fileID: 0}
 --- !u!1 &492362928
 GameObject:
@@ -1834,6 +1835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count: {fileID: 492362930}
   image: {fileID: 1871168984}
+  emptyImage: {fileID: 21300000, guid: 41a8cedd65536fd4a884b4fdc7ae8fa1, type: 3}
   item: {fileID: 0}
 --- !u!1001 &780661171
 PrefabInstance:
@@ -3714,6 +3716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count: {fileID: 1116305476}
   image: {fileID: 1300939404}
+  emptyImage: {fileID: 21300000, guid: 41a8cedd65536fd4a884b4fdc7ae8fa1, type: 3}
   item: {fileID: 0}
 --- !u!1 &1374272620
 GameObject:
@@ -5056,6 +5059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count: {fileID: 527602323}
   image: {fileID: 1499874624}
+  emptyImage: {fileID: 21300000, guid: 41a8cedd65536fd4a884b4fdc7ae8fa1, type: 3}
   item: {fileID: 0}
 --- !u!1001 &1818848408
 PrefabInstance:

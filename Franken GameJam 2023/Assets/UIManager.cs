@@ -71,4 +71,14 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void ClearUIInventory()
+    {
+        for (int i = 0; i < UIInventory.Length; i++)
+        {
+            UIInventory[i].count.SetText("");
+            UIInventory[i].image.sprite = UIInventory[i].emptyImage;
+            UIInventory[i].item = null;
+        }
+    }
+
 }

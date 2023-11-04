@@ -147,12 +147,20 @@ public class InventoryManager : MonoBehaviour
 
     public void KillInventory()
     {
+        //Reset all Effects
         axe.ResetStats();
         spear.ResetStats();
         ssc.ResetCooldown();
         hammer.ResetStats();
         GameManager.instance.player.ResetSpeed();
         GameManager.instance.player.ResetInvincTime();
+
+        for(int i = 0; i < inventory.Length; i++)
+        {
+            inventory[i] = null;
+        }
+
+
     }
 
 }
