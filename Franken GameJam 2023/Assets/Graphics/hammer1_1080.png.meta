@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5a85037d1bf059b4a98d633ae737a6ad
+guid: 1e4f286df6804ef46a07685ab352b8a4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 450
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hammerAOE1_2160_0
+      name: hammer1_1080_0
       rect:
         serializedVersion: 2
         x: 0
         y: 2160
-        width: 2160
-        height: 2160
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d87cd173910a0d745b4517fbdd3b3d8b
-      internalID: -1589563428
+      spriteID: 88c27f8d22e5f19408732d45e6103650
+      internalID: 839750580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hammerAOE1_2160_1
+      name: hammer1_1080_1
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2160
+        width: 1080
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46dc02d8b44c8cb449451e6753305fb6
+      internalID: -1572369234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hammer1_1080_2
       rect:
         serializedVersion: 2
         x: 2160
         y: 2160
-        width: 2160
-        height: 2160
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,50 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04dbe48a15246b84a8c6247ba9c73cdd
-      internalID: -864553487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hammerAOE1_2160_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2160
-        height: 2160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49d8a887529598a439774777c90d8f93
-      internalID: -1120729158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hammerAOE1_2160_3
-      rect:
-        serializedVersion: 2
-        x: 2160
-        y: 0
-        width: 2160
-        height: 2160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9d36dd00b3bc2d44ab04961a7d91a44
-      internalID: -1945356014
+      spriteID: 0ed021e74ea05a84fbc62057f8800b53
+      internalID: 2013507456
       vertices: []
       indices: 
       edges: []
@@ -230,10 +209,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hammerAOE1_2160_0: -1589563428
-      hammerAOE1_2160_1: -864553487
-      hammerAOE1_2160_2: -1120729158
-      hammerAOE1_2160_3: -1945356014
+      hammer1_1080_0: 839750580
+      hammer1_1080_1: -1572369234
+      hammer1_1080_2: 2013507456
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

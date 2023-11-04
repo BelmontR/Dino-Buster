@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Hammer
   m_EditorClassIdentifier: 
   name: Hammer
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 38266a0b44074424ca705b1d6950271d, type: 3}
