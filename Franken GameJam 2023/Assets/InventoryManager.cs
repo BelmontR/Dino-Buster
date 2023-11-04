@@ -40,22 +40,24 @@ public class InventoryManager : MonoBehaviour
 
                 ActivateEffect(item);
 
+                UIManager.instance.CollectItem(inventory[i]);
                 break;
             }
             else if(inventory[i].item == item)
             {
                 inventory[i].amount++;
-                pickedUp = false;
+                pickedUp = true;
 
                 ScaleEffect(inventory[i]);
 
+                UIManager.instance.CollectItem(inventory[i]);
                 break;
             }
         }
 
         if (pickedUp) { currentCum++; }
 
-        if(currentCum >= maxItemsCum)
+        if(currentCum >= maxItemsCum || !pickedUp)
         {
             UIManager.instance.GameOver();
         }
@@ -138,6 +140,16 @@ public class InventoryManager : MonoBehaviour
 
         }
 
+    }
+
+    public void KillInventory()
+    {
+        axe.ResetStats();
+        spear.ResetStats();
+        ssc.ResetCooldown();
+        hammer.ResetStats();
+        GameManager.instance.player.ResetSpeed();
+        GameManager.instance.player.ResetInvincTime();
     }
 
 }
