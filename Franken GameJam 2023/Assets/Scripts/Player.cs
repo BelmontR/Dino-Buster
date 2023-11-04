@@ -10,8 +10,6 @@ public class Player : MonoBehaviour
     public float invincibilityTime;
     public bool invincible = false;
 
-    public WeaponController[] weapons;
-
     private Vector2 movement;
 
     // Start is called before the first frame update

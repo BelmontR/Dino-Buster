@@ -45,6 +45,11 @@ public class SlingshotBehaviour : ProjectileWeaponBehaviour
             // Zerstöre auch das Projektil
             Destroy(gameObject);
         }
+        else if(collision.gameObject.GetComponent<Wall>() != null)
+        {
+            // Zerstöre auch das Projektil
+            Destroy(gameObject);
+        }
     }
 
 }

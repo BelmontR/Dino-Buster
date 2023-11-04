@@ -529,6 +529,7 @@ GameObject:
   - component: {fileID: 185542377}
   - component: {fileID: 185542376}
   - component: {fileID: 185542375}
+  - component: {fileID: 185542378}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -675,6 +676,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &185542378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185542373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3b455e88727ca429ce264f2c341167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &287848382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -988,8 +1001,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -999
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.2438936, g: 0.23153257, b: 0.4056604, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e711f56746410644281360d7a615f89f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2835,7 +2848,6 @@ MonoBehaviour:
   lives: 6
   invincibilityTime: 3
   invincible: 0
-  weapons: []
 --- !u!58 &1396756484
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3116,6 +3128,7 @@ GameObject:
   - component: {fileID: 1436652807}
   - component: {fileID: 1436652806}
   - component: {fileID: 1436652805}
+  - component: {fileID: 1436652808}
   m_Layer: 0
   m_Name: Wall (1)
   m_TagString: Untagged
@@ -3262,6 +3275,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1436652808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436652803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3b455e88727ca429ce264f2c341167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1491835453
 GameObject:
   m_ObjectHideFlags: 0
@@ -3274,6 +3299,7 @@ GameObject:
   - component: {fileID: 1491835457}
   - component: {fileID: 1491835456}
   - component: {fileID: 1491835455}
+  - component: {fileID: 1491835458}
   m_Layer: 0
   m_Name: Wall (3)
   m_TagString: Untagged
@@ -3420,6 +3446,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1491835458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491835453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3b455e88727ca429ce264f2c341167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1527838669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3642,6 +3680,7 @@ GameObject:
   - component: {fileID: 1746311269}
   - component: {fileID: 1746311268}
   - component: {fileID: 1746311267}
+  - component: {fileID: 1746311270}
   m_Layer: 0
   m_Name: Wall (2)
   m_TagString: Untagged
@@ -3788,6 +3827,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1746311270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746311265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3b455e88727ca429ce264f2c341167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1750657336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4380476565278808221, guid: 226498904b81b0746a386d5a80f46f08, type: 3}
