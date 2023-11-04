@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class Enemy : MonoBehaviour
 {
     public float speed = 30;
     public float hp;
     public int strength;
+    public SpriteRenderer sprite;
 
     private Stats stats;
 
@@ -42,6 +44,14 @@ public class Enemy : MonoBehaviour
         {
             movement = (target.position - this.transform.position).normalized;
             transform.Translate(movement * Time.deltaTime * stats.GetSpeed());
+            if(target.position.x < transform.position.x)
+            {
+                sprite.flipX = true;
+            }
+            else
+            {
+                sprite.flipX = false;
+            }
         }
     }
 

@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
 
     public void GameOver()
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         gameOverScreen.SetActive(true);
     }
 

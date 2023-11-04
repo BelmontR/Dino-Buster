@@ -26,7 +26,7 @@ public class SlingshotBehaviour : ProjectileWeaponBehaviour
     {
         //if(sshot != null)
         //{
-        transform.Translate(direction * speed * Time.deltaTime); //Set the movement of the slingshot
+        transform.Translate(direction.normalized * speed * Time.deltaTime); //Set the movement of the slingshot
 
         //}
     }
