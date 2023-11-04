@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        Time.timeScale = 1;
     }
 
     public void AddToScore(int increment)

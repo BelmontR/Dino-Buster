@@ -8,6 +8,8 @@ public class UIManager : MonoBehaviour
 
     public UIHeart[] hearts;
 
+    public GameObject gameOverScreen;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -32,6 +34,12 @@ public class UIManager : MonoBehaviour
                 i += 100;   //Beendet den Loop
             }
         }
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0;
+        gameOverScreen.SetActive(true);
     }
 
 }

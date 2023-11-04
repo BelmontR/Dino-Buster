@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
             if (lives <= 0)
             {
                 //ToDo: GameOver einleiten
+                UIManager.instance.GameOver();
             }
             else
             {
