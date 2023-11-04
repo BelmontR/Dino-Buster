@@ -17,13 +17,19 @@ public class Player : MonoBehaviour
 
     private Vector2 movement;
 
+    private float speedSaveState;
+    private float invincibilityTimeSaveState;
+
     // Start is called before the first frame update
     void Start()
     {
         axeController.SetActive(false);
         slingShotController.SetActive(true);
         spearController.SetActive(false);
-        clubController.SetActive(true);
+        clubController.SetActive(false);
+
+        speedSaveState = speed;
+        invincibilityTimeSaveState = invincibilityTime;
     }
 
     // Update is called once per frame
@@ -93,5 +99,15 @@ public class Player : MonoBehaviour
         {
             TakeHit();
         }
+    }
+
+    public void ResetSpeed()
+    {
+        speed = speedSaveState;
+    }
+
+    public void ResetInvincTime()
+    {
+        invincibilityTime = invincibilityTimeSaveState;
     }
 }

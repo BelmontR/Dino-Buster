@@ -71,9 +71,14 @@ public class Enemy : MonoBehaviour
         GameManager.instance.AddToScore(scoreValue);
         GameManager.instance.IncrementKilledEnemies();
 
+        int x = UnityEngine.Random.RandomRange(0, 100);
+
         if (drop != null)
         {
-            Instantiate(drop, transform.position, Quaternion.identity);
+            if (x <= dropRate * 100)
+            {
+                Instantiate(drop, transform.position, Quaternion.identity);
+            }
         }
 
         Destroy(this.gameObject);     

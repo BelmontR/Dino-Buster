@@ -22,7 +22,9 @@ public class InventoryManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
+            inventory = new ItemAmountMapper[4];
         }
+
     }
 
     public bool CollectItem(InventoryEntity item)
@@ -35,12 +37,18 @@ public class InventoryManager : MonoBehaviour
             {
                 inventory[i] = new ItemAmountMapper(item, 1);
                 pickedUp = true;
+
+                ActivateEffect(item);
+
                 break;
             }
             else if(inventory[i].item == item)
             {
                 inventory[i].amount++;
                 pickedUp = false;
+
+                ScaleEffect(inventory[i]);
+
                 break;
             }
         }
@@ -89,24 +97,45 @@ public class InventoryManager : MonoBehaviour
         switch (iam.item.name)
         {
             case "Axe":
+                axe.ResetStats();
+
                 axe.stats.IncreaseKbStrength(iam.amount * 0.1f);
                 axe.stats.IncreaseKbLength(iam.amount * 0.05f);
                 axe.stats.IncreaseStrength(iam.amount * 0.05f);
                 break;
 
             case "Spear":
-                axe.stats.IncreaseStrength(iam.amount * 0.2f);
+                spear.ResetStats();
+
+                spear.stats.IncreaseStrength(iam.amount * 0.2f);
                 break;
 
             case "Stone":
-                axe.stats.IncreaseKbStrength(iam.amount * 0.05f);
-                axe.stats.IncreaseStrength(iam.amount * 0.025f);
+                ssc.ResetCooldown();
+                ssc.DecreaseCooldown(iam.amount * 0.05f);
                 break;
 
             case "Hammer":
-                axe.stats.IncreaseKbStrength(iam.amount * 0.135f);
-                axe.stats.IncreaseKbLength(iam.amount * 0.075f);
+                hammer.ResetStats();
+
+                hammer.stats.IncreaseKbStrength(iam.amount * 0.135f);
+                hammer.stats.IncreaseKbLength(iam.amount * 0.075f);
                 break;
+
+            case "Bone":
+                GameManager.instance.player.ResetSpeed();
+                GameManager.instance.player.speed *= 1 + (iam.amount * 0.1f);
+                break;
+
+            case "Egg":
+                GameManager.instance.player.ResetInvincTime();
+                GameManager.instance.player.invincibilityTime += (iam.amount * 0.1f);
+                if(GameManager.instance.player.invincibilityTime > 5f)
+                {
+                    GameManager.instance.player.invincibilityTime = 5f;
+                }
+                break;
+
         }
 
     }

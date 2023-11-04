@@ -6,9 +6,12 @@ public class SlingshotController : WeaponController
 {
     public bool aimWithCursor;
 
+    public float cooldownSaveState;
+
     protected override void Start()
     {
         base.Start();
+        cooldownSaveState = cooldownDuration;
     }
 
     protected override void Attack()
@@ -47,5 +50,19 @@ public class SlingshotController : WeaponController
             spawnedSlingshot.GetComponent<SlingshotBehaviour>().DirectionChecker(moveDirection);
 
         }
+    }
+
+    public void DecreaseCooldown(float dec)
+    {
+        cooldownDuration -= dec;
+        if(cooldownDuration <= 0.1f)
+        {
+            cooldownDuration = 0.1f;
+        }
+    }
+
+    public void ResetCooldown()
+    {
+        cooldownDuration = cooldownSaveState;
     }
 }

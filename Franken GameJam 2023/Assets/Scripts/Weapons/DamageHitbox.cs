@@ -26,6 +26,13 @@ public class DamageHitbox : MonoBehaviour
         }
     }
 
+    public void ResetStats()
+    {
+        stats.SetStrength(strength);
+        stats.SetKbStrength(kbStrength);
+        stats.SetKbLength(kbLength);
+    }
+
     public class dmgHbStats
     {
         public float strength;
