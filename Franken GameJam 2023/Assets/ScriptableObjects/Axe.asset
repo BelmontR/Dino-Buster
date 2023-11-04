@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Axe
   m_EditorClassIdentifier: 
   name: Axe
-  image: {fileID: 0}
+  image: {fileID: -497501572, guid: 402420a877a26774e8bb68ecaf886823, type: 3}

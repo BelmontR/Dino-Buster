@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
 
     [Range(0f,1f)]
     public float dropRate;
-    public GameObject drop;
+    public GameObject[] dropPool;
 
     public int scoreValue = 10;
 
@@ -71,13 +71,13 @@ public class Enemy : MonoBehaviour
         GameManager.instance.AddToScore(scoreValue);
         GameManager.instance.IncrementKilledEnemies();
 
-        int x = UnityEngine.Random.RandomRange(0, 100);
+        int x = UnityEngine.Random.Range(0, 100);
 
-        if (drop != null)
+        if (dropPool[0] != null)
         {
             if (x <= dropRate * 100)
             {
-                Instantiate(drop, transform.position, Quaternion.identity);
+                Instantiate(dropPool[UnityEngine.Random.Range(0, dropPool.Length)], transform.position, Quaternion.identity);
             }
         }
 

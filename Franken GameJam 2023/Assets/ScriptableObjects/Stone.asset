@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Stone
   m_EditorClassIdentifier: 
   name: Stone
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: f23c50a11d0d0f94282df1cb31fd8c4a, type: 3}

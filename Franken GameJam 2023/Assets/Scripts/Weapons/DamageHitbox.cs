@@ -48,17 +48,17 @@ public class DamageHitbox : MonoBehaviour
 
         public void IncreaseStrength(float multiplicator)
         {
-            strength *= multiplicator;
+            strength *= (1+ multiplicator);
         }
 
         public void IncreaseKbStrength(float multiplicator)
         {
-            kbStrength *= multiplicator;
+            kbStrength *= (1 + multiplicator);
         }
 
         public void IncreaseKbLength(float multiplicator)
         {
-            kbStrength *= multiplicator;
+            kbStrength *= (1+ multiplicator);
         }
 
         public void SetStrength(float str)
