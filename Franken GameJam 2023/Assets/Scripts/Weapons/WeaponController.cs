@@ -12,6 +12,9 @@ public class WeaponController : MonoBehaviour
     float currentCooldown;
     public int pierce;
 
+    public float knockbackStrength;
+    public float knockbackLength;
+
     protected Player playermovement;
 
    protected virtual void Start()

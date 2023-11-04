@@ -27,6 +27,10 @@ public class SlingshotController : WeaponController
         // Erzeuge das Projektil an der berechneten Spawn-Position
         GameObject spawnedSlingshot = Instantiate(prefab, spawnPosition, Quaternion.identity);
 
+        spawnedSlingshot.GetComponent<SlingshotBehaviour>().strength = damage;
+        spawnedSlingshot.GetComponent<SlingshotBehaviour>().kbStrength = knockbackStrength;
+        spawnedSlingshot.GetComponent<SlingshotBehaviour>().kbLength = knockbackLength;
+
         if (!aimWithCursor)
         {
             // Passe die Projektilrichtung an

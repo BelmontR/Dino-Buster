@@ -1693,6 +1693,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1527838672}
   - {fileID: 1976683534}
   - {fileID: 1149030287}
   - {fileID: 2077854963}
@@ -1885,10 +1886,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4372604717373601495, guid: bbaefe7bf74345e4dbcfeec5c6a18a9a, type: 3}
-  damage: 5
+  damage: 3
   frequency: 3
-  cooldownDuration: 3
+  cooldownDuration: 1
   pierce: 2
+  knockbackStrength: 3
+  knockbackLength: 0.5
   aimWithCursor: 1
 --- !u!1001 &1166490084
 PrefabInstance:
@@ -2780,6 +2783,7 @@ MonoBehaviour:
   lives: 6
   invincibilityTime: 3
   invincible: 0
+  weapons: []
 --- !u!58 &1396756484
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3422,13 +3426,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527838669}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -400, y: -210.9489, z: 0}
+  m_LocalScale: {x: 0.729927, y: 0.729927, z: 0.729927}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 949538129}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1658562855 stripped
 Transform:
@@ -4406,7 +4410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3992048443415505049, guid: 016f449beb754ec45a64ae4c06290b02, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

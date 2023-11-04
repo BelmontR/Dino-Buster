@@ -8,13 +8,16 @@ public class SlingshotBehaviour : ProjectileWeaponBehaviour
     Enemy enemy;
 
     public float speed = 30f;
+    public float strength;
+    public float kbStrength;
+    public float kbLength;
 
     protected override void Start()
     {
-         sshot = GetComponent<SlingshotController>();
+         //sshot = GetComponent<SlingshotController>();
          if(sshot == null)
          {
-            Debug.LogError("ShlingshotController not found on this gameobject");
+            //Debug.LogError("ShlingshotController not found on this gameobject");
          }
     }
 
@@ -23,8 +26,8 @@ public class SlingshotBehaviour : ProjectileWeaponBehaviour
     {
         //if(sshot != null)
         //{
-            transform.Translate(direction * speed * Time.deltaTime); //Set the movement of the slingshot
-        Debug.Log(direction);
+        transform.Translate(direction * speed * Time.deltaTime); //Set the movement of the slingshot
+
         //}
     }
 
@@ -36,16 +39,8 @@ public class SlingshotBehaviour : ProjectileWeaponBehaviour
         if (enemy != null)
         {
             // Füge Schaden hinzu
-            enemy.TakeHit(10);
-
-            //Wird bereits im Enemy überprüft
-            /*
-            // Überprüfe, ob die HP 0 ist und zerstöre das GameObject
-            if (enemy.hp <= 0)
-            {
-               Destroy(collision.gameObject);
-            }
-            */
+            enemy.TakeHit(strength);
+            enemy.TakeKnockback(this.gameObject, kbStrength, kbLength);
 
             // Zerstöre auch das Projektil
             Destroy(gameObject);

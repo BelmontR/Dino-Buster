@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
@@ -17,21 +18,31 @@ public class Enemy : MonoBehaviour
     public float dropRate;
     public GameObject drop;
 
-
     private Transform target;
+
+    [SerializeField]
+    private Rigidbody2D rb;
+    public UnityEvent OnBegin;
+    public UnityEvent OnDone;
+
+    private bool blockMovement = false;
 
     // Start is called before the first frame update
     void Start()
     {
         target = GameManager.instance.player.transform;
         stats = new Stats(speed, hp, strength, dropRate);
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        movement = (target.position - this.transform.position).normalized;
-        transform.Translate(movement * Time.deltaTime * stats.GetSpeed());
+        if (!blockMovement)
+        {
+            movement = (target.position - this.transform.position).normalized;
+            transform.Translate(movement * Time.deltaTime * stats.GetSpeed());
+        }
     }
 
     public void TakeHit(float damage)
@@ -49,6 +60,30 @@ public class Enemy : MonoBehaviour
         GameManager.instance.currentEnemies--;
         Destroy(this.gameObject);     
     }
+
+    #region Knockback
+
+    public void TakeKnockback(GameObject sender, float kbStrength, float kbLength)
+    {
+        StopAllCoroutines();
+
+        blockMovement = true;
+
+        Vector2 dir = (transform.position - sender.transform.position).normalized;
+        rb.AddForce(dir * kbStrength, ForceMode2D.Impulse);
+        StartCoroutine(ResetKnockback(kbLength));
+
+
+    }
+
+    private IEnumerator ResetKnockback(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        rb.velocity = Vector3.zero;
+        blockMovement = false;
+    }
+
+    #endregion
 
     private class Stats
     {
