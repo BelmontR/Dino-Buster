@@ -10,8 +10,9 @@ public class Player : MonoBehaviour
     public float invincibilityTime;
     private bool invincible = false;
 
-    public Vector2 movement;
+    private Vector2 movement;
 
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -20,14 +21,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerMovement();
-        
-    }
-
-
-    public void PlayerMovement()
-    {
-      movement = Vector2.zero;
+        movement = Vector2.zero;
         if ((Input.GetKey(KeyCode.W)))
         {
             movement += Vector2.up;
@@ -35,7 +29,6 @@ public class Player : MonoBehaviour
         if ((Input.GetKey(KeyCode.A)))
         {
             movement += Vector2.left;
-            
         }
         if ((Input.GetKey(KeyCode.S)))
         {
@@ -44,13 +37,11 @@ public class Player : MonoBehaviour
         if((Input.GetKey(KeyCode.D)))
         {
             movement += Vector2.right;
-            Debug.Log(movement);
         }
 
-        movement = movement.normalized;
-       
-        transform.Translate(movement * Time.deltaTime * speed);
+        transform.Translate(movement.normalized * Time.deltaTime * speed);
     }
+
     public void TakeHit()
     {
         if (!invincible)
@@ -67,6 +58,7 @@ public class Player : MonoBehaviour
             }
         }
     }
+
 
     public IEnumerator InvincibilityCoro()
     {
