@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  hp: 0
+  hp: 5
   strength: 0
   dropRate: 0
   drop: {fileID: 0}
