@@ -70,6 +70,12 @@ public class Enemy : MonoBehaviour
         GameManager.instance.currentEnemies--;
         GameManager.instance.AddToScore(scoreValue);
         GameManager.instance.IncrementKilledEnemies();
+
+        if (drop != null)
+        {
+            Instantiate(drop, transform.position, Quaternion.identity);
+        }
+
         Destroy(this.gameObject);     
     }
 
