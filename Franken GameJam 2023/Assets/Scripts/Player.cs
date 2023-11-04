@@ -36,11 +36,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void FixedUpdate()
-    {
         movement = Vector2.zero;
         if ((Input.GetKey(KeyCode.W)))
         {
@@ -59,7 +54,16 @@ public class Player : MonoBehaviour
             movement += Vector2.right;
         }
 
-        if(movement == Vector2.zero)
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            axeController.SetActive(false);
+            slingShotController.SetActive(false);
+            // spearController.SetActive(false);
+            clubController.SetActive(false);
+            InventoryManager.instance.KillInventory();
+        }
+
+        if (movement == Vector2.zero)
         {
             GetComponent<Animator>().Play("Idle");
         }

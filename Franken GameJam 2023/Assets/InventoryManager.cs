@@ -103,7 +103,6 @@ public class InventoryManager : MonoBehaviour
             case "Axe":
                 axe.ResetStats();
 
-
                 axe.stats.IncreaseKbStrength(temp * 0.1f);
                 axe.stats.IncreaseKbLength(temp * 0.05f);
                 axe.stats.IncreaseStrength(temp * 0.05f);
@@ -148,17 +147,29 @@ public class InventoryManager : MonoBehaviour
     public void KillInventory()
     {
         //Reset all Effects
+        axe.gameObject.SetActive(true);
         axe.ResetStats();
-        spear.ResetStats();
+        axe.gameObject.SetActive(false);
+
+        //spear.ResetStats();
+
+        ssc.gameObject.SetActive(true);
         ssc.ResetCooldown();
+        ssc.gameObject.SetActive(false);
+
+        hammer.gameObject.SetActive(true);
         hammer.ResetStats();
+        hammer.gameObject.SetActive(false);
+
         GameManager.instance.player.ResetSpeed();
         GameManager.instance.player.ResetInvincTime();
 
-        for(int i = 0; i < inventory.Length; i++)
+        for (int i = 0; i < inventory.Length; i++)
         {
             inventory[i] = null;
         }
+
+        UIManager.instance.ClearUIInventory();
 
 
     }
