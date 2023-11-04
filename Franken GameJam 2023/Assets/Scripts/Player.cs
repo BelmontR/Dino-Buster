@@ -23,13 +23,14 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        speedSaveState = speed;
+        invincibilityTimeSaveState = invincibilityTime;
+
         axeController.SetActive(false);
         slingShotController.SetActive(false);
         spearController.SetActive(false);
         clubController.SetActive(false);
 
-        speedSaveState = speed;
-        invincibilityTimeSaveState = invincibilityTime;
     }
 
     // Update is called once per frame

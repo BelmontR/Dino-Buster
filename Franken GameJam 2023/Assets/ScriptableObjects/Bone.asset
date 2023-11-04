@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Bone
   m_EditorClassIdentifier: 
   name: Bone
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 3012ff2ef5f7bab41922d61c9f3b125b, type: 3}

@@ -129,12 +129,12 @@ public class InventoryManager : MonoBehaviour
 
             case "Bone":
                 GameManager.instance.player.ResetSpeed();
-                GameManager.instance.player.speed *= 1 + (temp * 0.1f);
+                GameManager.instance.player.speed *= (1 + (temp * 0.1f));
                 break;
 
             case "Egg":
                 GameManager.instance.player.ResetInvincTime();
-                GameManager.instance.player.invincibilityTime += (temp * 0.1f);
+                GameManager.instance.player.invincibilityTime += (temp * 0.2f);
                 if(GameManager.instance.player.invincibilityTime > 5f)
                 {
                     GameManager.instance.player.invincibilityTime = 5f;
