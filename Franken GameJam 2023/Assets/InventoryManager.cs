@@ -96,42 +96,45 @@ public class InventoryManager : MonoBehaviour
 
     public void ScaleEffect(ItemAmountMapper iam)
     {
+        int temp = (iam.amount < 20) ? iam.amount : 20;
+
         switch (iam.item.name)
         {
             case "Axe":
                 axe.ResetStats();
 
-                axe.stats.IncreaseKbStrength(iam.amount * 0.1f);
-                axe.stats.IncreaseKbLength(iam.amount * 0.05f);
-                axe.stats.IncreaseStrength(iam.amount * 0.05f);
+
+                axe.stats.IncreaseKbStrength(temp * 0.1f);
+                axe.stats.IncreaseKbLength(temp * 0.05f);
+                axe.stats.IncreaseStrength(temp * 0.05f);
                 break;
 
             case "Spear":
                 spear.ResetStats();
 
-                spear.stats.IncreaseStrength(iam.amount * 0.2f);
+                spear.stats.IncreaseStrength(temp * 0.2f);
                 break;
 
             case "Stone":
                 ssc.ResetCooldown();
-                ssc.DecreaseCooldown(iam.amount * 0.05f);
+                ssc.DecreaseCooldown(temp * 0.05f);
                 break;
 
             case "Hammer":
                 hammer.ResetStats();
 
-                hammer.stats.IncreaseKbStrength(iam.amount * 0.135f);
-                hammer.stats.IncreaseKbLength(iam.amount * 0.075f);
+                hammer.stats.IncreaseKbStrength(temp * 0.125f);
+                hammer.stats.IncreaseKbLength(temp * 0.075f);
                 break;
 
             case "Bone":
                 GameManager.instance.player.ResetSpeed();
-                GameManager.instance.player.speed *= 1 + (iam.amount * 0.1f);
+                GameManager.instance.player.speed *= 1 + (temp * 0.1f);
                 break;
 
             case "Egg":
                 GameManager.instance.player.ResetInvincTime();
-                GameManager.instance.player.invincibilityTime += (iam.amount * 0.1f);
+                GameManager.instance.player.invincibilityTime += (temp * 0.1f);
                 if(GameManager.instance.player.invincibilityTime > 5f)
                 {
                     GameManager.instance.player.invincibilityTime = 5f;
