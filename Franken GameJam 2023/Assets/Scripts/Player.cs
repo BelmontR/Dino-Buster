@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
 
         axeController.SetActive(false);
         slingShotController.SetActive(false);
-        spearController.SetActive(false);
+       // spearController.SetActive(false);
         clubController.SetActive(false);
 
     }
