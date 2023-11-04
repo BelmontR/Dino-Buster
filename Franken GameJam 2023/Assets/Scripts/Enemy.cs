@@ -65,21 +65,12 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
-          if (stats.GetHP() > 0)
-            return;
         //ToDo: Drop Drops
         //ToDo: Todes-Animation
         GameManager.instance.currentEnemies--;
         GameManager.instance.AddToScore(scoreValue);
         GameManager.instance.IncrementKilledEnemies();
-
         Destroy(this.gameObject);     
-         if (drop != null)
-        {
-            Instantiate(drop, transform.position, Quaternion.identity);
-        }
-
-
     }
 
     #region Knockback
@@ -120,10 +111,7 @@ public class Enemy : MonoBehaviour
             this.strength = strength;
             this.dropRate = dropRate;
         }
-        public float GetHP()
-        {
-            return hp;
-        }
+
         public bool TakeHit(float dmg)
         {
             hp -= dmg;
