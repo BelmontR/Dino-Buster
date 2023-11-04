@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4104839946335345227}
   - component: {fileID: 3577528331547894731}
   m_Layer: 0
-  m_Name: StoneDrop 1
+  m_Name: EggDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 38266a0b44074424ca705b1d6950271d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 945b2c428a480cb46ae09db37f7a8c3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,18 +124,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.10037637, y: -0.4132563}
+  m_Offset: {x: 0.042422652, y: 0.026836127}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.9285715, y: 3.9285715}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 10.8, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.739242, y: 0.92714}
+  m_Size: {x: 1.5682898, y: 1.4363904}
   m_EdgeRadius: 0
 --- !u!50 &4104839946335345227
 Rigidbody2D:
@@ -176,4 +176,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 312d1b8230fb5b94d832b54b6c6578b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 9b833d1398bc1d942b968eec26733eb3, type: 2}
+  item: {fileID: 11400000, guid: 5c603663824614a47a110d1c148a400b, type: 2}
