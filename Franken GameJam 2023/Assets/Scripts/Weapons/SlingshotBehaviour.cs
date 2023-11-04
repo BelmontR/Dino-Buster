@@ -24,24 +24,27 @@ public class SlingshotBehaviour : ProjectileWeaponBehaviour
         }
     }
     void OnCollisionEnter2D(Collision2D collision)
-{
-    // Überprüfe, ob das kollidierte Objekt einen Health- oder Damage-Controller hat
-     Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-
-    if (enemy != null)
     {
-        // Füge Schaden hinzu
-        enemy.TakeHit(10);
+        // Überprüfe, ob das kollidierte Objekt einen Health- oder Damage-Controller hat
+        enemy = collision.gameObject.GetComponent<Enemy>();
 
-        // Überprüfe, ob die HP 0 ist und zerstöre das GameObject
-        if (enemy.hp <= 0)
+        if (enemy != null)
         {
-            Destroy(collision.gameObject);
-        }
+            // Füge Schaden hinzu
+            enemy.TakeHit(10);
 
-        // Zerstöre auch das Projektil
-        Destroy(gameObject);
-    }
+            //Wird bereits im Enemy überprüft
+            /*
+            // Überprüfe, ob die HP 0 ist und zerstöre das GameObject
+            if (enemy.hp <= 0)
+            {
+               Destroy(collision.gameObject);
+            }
+            */
+
+            // Zerstöre auch das Projektil
+            Destroy(gameObject);
+        }
 }
 
 }
