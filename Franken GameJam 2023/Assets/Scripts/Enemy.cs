@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class Enemy : MonoBehaviour
 {
@@ -70,14 +71,19 @@ public class Enemy : MonoBehaviour
         GameManager.instance.currentEnemies--;
         GameManager.instance.AddToScore(scoreValue);
         GameManager.instance.IncrementKilledEnemies();
+        GameManager.instance.spawnedEnemies.Remove(this);
 
         int x = UnityEngine.Random.Range(0, 100);
 
-        if (dropPool[0] != null)
+        if (GameManager.instance.maxItemsOnScreen >= GameManager.instance.currentItemsOnScreen)
         {
-            if (x <= dropRate * 100)
+            if (dropPool[0] != null)
             {
-                Instantiate(dropPool[UnityEngine.Random.Range(0, dropPool.Length)], transform.position, Quaternion.identity);
+                if (x <= dropRate * 100)
+                {
+                    Instantiate(dropPool[UnityEngine.Random.Range(0, dropPool.Length)], transform.position, Quaternion.identity);
+                    GameManager.instance.currentItemsOnScreen++;
+                }
             }
         }
 

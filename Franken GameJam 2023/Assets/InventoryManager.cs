@@ -146,6 +146,8 @@ public class InventoryManager : MonoBehaviour
 
     public void KillInventory()
     {
+        Debug.Log("InvKill 1");
+
         //Reset all Effects
         axe.gameObject.SetActive(true);
         axe.ResetStats();
@@ -170,6 +172,11 @@ public class InventoryManager : MonoBehaviour
         }
 
         UIManager.instance.ClearUIInventory();
+
+        GameManager.instance.KillAllEnemies();
+        GameManager.instance.ScaleEnemies(currentCum / maxItemsCum);
+
+        Debug.Log("InvKill 2");
 
 
     }

@@ -161,7 +161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5425001, y: 0.031243058}
   m_AnchorMax: {x: 0.9912501, y: 0.15786457}
-  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &18627785
@@ -576,7 +576,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8, y: 0.15100001}
   m_AnchorMax: {x: 0.98625, y: 0.30762976}
-  m_AnchoredPosition: {x: -0.1000061, y: 0.2999878}
+  m_AnchoredPosition: {x: -0.1000061, y: 0}
   m_SizeDelta: {x: 1.5745239, y: 2.4190063}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &162477291
@@ -3496,9 +3496,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnemies: 10
-  maxItemsOnScreen: 0
+  maxItemsOnScreen: 200
   currentEnemies: 0
   currentItemsOnScreen: 0
+  enemyPrefabs: []
+  spawnedEnemies: []
   player: {fileID: 1396756483}
 --- !u!4 &1324303395
 Transform:
@@ -3756,7 +3758,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8, y: 0.35751906}
   m_AnchorMax: {x: 0.98625, y: 0.51659167}
-  m_AnchoredPosition: {x: -0.1000061, y: -0.30000305}
+  m_AnchoredPosition: {x: -0.1000061, y: 0}
   m_SizeDelta: {x: 1.5745239, y: 1.4190063}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1374272622
@@ -3905,7 +3907,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -37.288086}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 800, y: 74.46521}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1385182650
@@ -5612,7 +5614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 151.4, y: -27}
+  m_AnchoredPosition: {x: 151.4, y: -29.6}
   m_SizeDelta: {x: 292.8611, y: 42.9997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1976683535

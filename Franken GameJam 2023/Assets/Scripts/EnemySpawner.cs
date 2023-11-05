@@ -27,7 +27,9 @@ public class EnemySpawner : MonoBehaviour
     {
         var enemy = Instantiate<GameObject>(spawnableThing, transform.position, transform.rotation);
         enemy.transform.parent = null; //Evlt. redundant, aber sicher ist sicher
+
         GameManager.instance.currentEnemies++;
+        GameManager.instance.spawnedEnemies.Add(enemy.GetComponent<Enemy>());
     }
 
     //Dadurch können nur Spawner außerhalb der Kamera auch Gegner spawnen -> Es "ploppen" keine Gegner aus dem nichts raus, sondern sie kommen vom Rand hergelaufen

@@ -13,6 +13,11 @@ public class DamageHitbox : MonoBehaviour
 
     private void Start()
     {
+        CallStart();
+    }
+
+    private void CallStart()
+    {
         stats = new dmgHbStats(strength, kbStrength, kbLength);
     }
 
@@ -28,6 +33,12 @@ public class DamageHitbox : MonoBehaviour
 
     public void ResetStats()
     {
+        if(stats == null)
+        {
+            Debug.Log("Die Stats sind Null");
+            CallStart();
+        }
+
         stats.SetStrength(strength);
         stats.SetKbStrength(kbStrength);
         stats.SetKbLength(kbLength);

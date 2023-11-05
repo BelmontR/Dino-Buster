@@ -66,7 +66,7 @@ public class UIManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Jo, Bruder, was ne Scheiﬂe, wie konnte das passieren?");
+                //Debug.Log("Jo, Bruder, was ne Scheiﬂe, wie konnte das passieren?");
             }
         }
     }
