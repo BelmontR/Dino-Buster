@@ -153,7 +153,9 @@ public class InventoryManager : MonoBehaviour
         axe.ResetStats();
         axe.gameObject.SetActive(false);
 
-        //spear.ResetStats();
+        spear.gameObject.SetActive(true);
+        spear.ResetStats();
+        spear.gameObject.SetActive(false);
 
         ssc.gameObject.SetActive(true);
         ssc.ResetCooldown();

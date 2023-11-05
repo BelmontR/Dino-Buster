@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  hp: 5
+  hp: 7
   strength: 0
   sprite: {fileID: 8124846916860940830}
   dropRate: 0.6

@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 
         axeController.SetActive(false);
         slingShotController.SetActive(false);
-       // spearController.SetActive(false);
+        spearController.SetActive(false);
         clubController.SetActive(false);
 
     }
@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
         {
             axeController.SetActive(false);
             slingShotController.SetActive(false);
-            // spearController.SetActive(false);
+            spearController.SetActive(false);
             clubController.SetActive(false);
             anhil.SetActive(true);
             InventoryManager.instance.KillInventory();

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Spear
   m_EditorClassIdentifier: 
   name: Spear
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 644d9e7e59922d644a0b5d51c6330ee9, type: 3}
