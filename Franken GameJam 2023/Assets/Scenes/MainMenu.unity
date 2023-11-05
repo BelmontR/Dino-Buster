@@ -300,18 +300,19 @@ MonoBehaviour:
 
     Try to survive as long as possible. You die when
     you lose all of your hearts, you collect more unique items than you have itemslots
-    or your total item count is bigger than your maximum capacity
+    or your total item count is bigger than your maximum capacity. Bones make you
+    faster and eggs give you an longer invincibility time
 
 
-    Good Luck
-    and have fun!
+    Good Luck and have
+    fun!
 
     Click anywhere to close this window.
 
 
-    Programmed by Rene
-    Jokiel (BelmontR @GitHub), Graphics by FranziskaDillinger and  dondusterbolddubel
-    , Music by LEMROD.
+    Programmed by Rene Jokiel
+    (BelmontR @GitHub), Graphics by FranziskaDillinger and  dondusterbolddubel ,
+    Music by LEMROD.
 
 
     This game was developed during the Franken GameJam 2023
@@ -342,7 +343,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
+  m_fontSize: 21.4
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
