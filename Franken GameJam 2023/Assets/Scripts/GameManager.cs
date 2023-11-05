@@ -68,6 +68,11 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator GamePlayCoro()
     {
+        maxEnemies = 10;
+
+        yield return new WaitForSeconds(60f);
+        maxEnemies = 50;
+
         yield return new WaitForSeconds(60f);
         maxEnemies =(int) (maxEnemies * 1.5);
 

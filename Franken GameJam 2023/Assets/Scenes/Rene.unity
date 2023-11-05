@@ -4942,7 +4942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnemies: 10
-  maxItemsOnScreen: 200
+  maxItemsOnScreen: 500
   currentEnemies: 0
   currentItemsOnScreen: 0
   enemyPrefabs:
