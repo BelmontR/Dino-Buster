@@ -311,12 +311,12 @@ MonoBehaviour:
 
 
     Programmed by Rene Jokiel
-    (BelmontR @GitHub), Graphics by FranziskaDillinger and  dondusterbolddubel ,
-    Music by LEMROD.
+    (BelmontR @GitHub), Graphics by Franziska Dillinger and Lukas Schmidt, Music
+    by LEMROD.
 
 
-    This game was developed during the Franken GameJam 2023
-    within 48 Hours.'
+    This game was developed during the Franken GameJam 2023 within
+    48 Hours.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
