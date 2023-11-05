@@ -13,8 +13,8 @@ public class GameOverScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        score.text = GameManager.instance.GetScore().ToString();
-        killedEnemies.text = GameManager.instance.GetKE().ToString();
+        score.text = "Score: " + GameManager.instance.GetScore().ToString();
+        killedEnemies.text = "Busted Dinos: " + GameManager.instance.GetKE().ToString();
 
         StartCoroutine(FadeOutMusic());
     }
