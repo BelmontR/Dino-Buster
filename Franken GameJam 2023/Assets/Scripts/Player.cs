@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     public GameObject spearController;
     public GameObject clubController;
 
+    public GameObject anhil;
+
     private Vector2 movement;
 
     private float speedSaveState;
@@ -60,6 +62,7 @@ public class Player : MonoBehaviour
             slingShotController.SetActive(false);
             // spearController.SetActive(false);
             clubController.SetActive(false);
+            anhil.SetActive(true);
             InventoryManager.instance.KillInventory();
         }
 
