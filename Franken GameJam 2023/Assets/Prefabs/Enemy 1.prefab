@@ -109,7 +109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295819568342412674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6, y: 2.55, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -157,8 +157,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -623030831, guid: ab04552d410b3ce4ea433fc1158dc970, type: 3}
-  m_Color: {r: 0.50681007, g: 0.8773585, b: 0.47592562, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 598fc325592629c49b6f39f995d5af8a, type: 3}
+  m_Color: {r: 1, g: 0.93971574, b: 0.3803922, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -179,11 +179,11 @@ GameObject:
   - component: {fileID: 8548077039959706265}
   - component: {fileID: 610330622059087324}
   - component: {fileID: 8548070386277478457}
+  - component: {fileID: 7495669872756874024}
   - component: {fileID: 2477122478419190018}
   - component: {fileID: 3159901020700329264}
-  - component: {fileID: 4080371976683093287}
   m_Layer: 0
-  m_Name: EnemyHealth
+  m_Name: Enemy 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,54 +285,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2477122478419190018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8596772292422323664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f564119f7993804d8823612fc201b7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  hp: 17
-  strength: 0
-  sprite: {fileID: 8124846916860940830}
-  dropRate: 0.6
-  dropPool:
-  - {fileID: 6509017623133985542, guid: 17dbbe06354b612469a576175b66cf64, type: 3}
-  - {fileID: 6509017623133985542, guid: 677fe2bb2a9b879498acd60caaa914d8, type: 3}
-  - {fileID: 6509017623133985542, guid: 662783691aee8964facf03b347e7d047, type: 3}
-  - {fileID: 6509017623133985542, guid: b8d532e0a77618d4da079f898d5e12d9, type: 3}
-  - {fileID: 6509017623133985542, guid: b640498c273e43940a34c2a1caa8cb42, type: 3}
-  scoreValue: 20
-  rb: {fileID: 0}
---- !u!95 &3159901020700329264
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8596772292422323664}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ed83fd302d3cf3043a393c1071182a15, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!70 &4080371976683093287
-CapsuleCollider2D:
+--- !u!61 &7495669872756874024
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -363,6 +317,61 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.119689986, y: 2.4636235}
-  m_Size: {x: 3.6837168, y: 10.04725}
-  m_Direction: 0
+  m_Offset: {x: -0.1580236, y: -0.5570474}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 0.984375, y: 0.984375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.115333, y: 3.4058027}
+  m_EdgeRadius: 0
+--- !u!114 &2477122478419190018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596772292422323664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f564119f7993804d8823612fc201b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  hp: 7
+  strength: 0
+  sprite: {fileID: 8124846916860940830}
+  dropRate: 0.6
+  dropPool:
+  - {fileID: 6509017623133985542, guid: 17dbbe06354b612469a576175b66cf64, type: 3}
+  - {fileID: 6509017623133985542, guid: 677fe2bb2a9b879498acd60caaa914d8, type: 3}
+  - {fileID: 6509017623133985542, guid: 662783691aee8964facf03b347e7d047, type: 3}
+  - {fileID: 6509017623133985542, guid: b640498c273e43940a34c2a1caa8cb42, type: 3}
+  scoreValue: 10
+  rb: {fileID: 0}
+--- !u!95 &3159901020700329264
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596772292422323664}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5aa4de5941b6a7c419412b1a4cf88fd2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

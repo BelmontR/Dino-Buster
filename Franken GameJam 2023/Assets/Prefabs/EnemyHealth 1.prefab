@@ -158,7 +158,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -623030831, guid: ab04552d410b3ce4ea433fc1158dc970, type: 3}
-  m_Color: {r: 0.50681007, g: 0.8773585, b: 0.47592562, a: 1}
+  m_Color: {r: 0.5441607, g: 0.4745098, b: 0.8784314, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 3159901020700329264}
   - component: {fileID: 4080371976683093287}
   m_Layer: 0
-  m_Name: EnemyHealth
+  m_Name: EnemyHealth 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,11 +303,8 @@ MonoBehaviour:
   sprite: {fileID: 8124846916860940830}
   dropRate: 0.6
   dropPool:
-  - {fileID: 6509017623133985542, guid: 17dbbe06354b612469a576175b66cf64, type: 3}
-  - {fileID: 6509017623133985542, guid: 677fe2bb2a9b879498acd60caaa914d8, type: 3}
-  - {fileID: 6509017623133985542, guid: 662783691aee8964facf03b347e7d047, type: 3}
   - {fileID: 6509017623133985542, guid: b8d532e0a77618d4da079f898d5e12d9, type: 3}
-  - {fileID: 6509017623133985542, guid: b640498c273e43940a34c2a1caa8cb42, type: 3}
+  - {fileID: 6509017623133985542, guid: 4cf9789bcd160774a9ae2c04195972f8, type: 3}
   scoreValue: 20
   rb: {fileID: 0}
 --- !u!95 &3159901020700329264

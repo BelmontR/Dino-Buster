@@ -352,6 +352,7 @@ MonoBehaviour:
   - {fileID: 6509017623133985542, guid: 677fe2bb2a9b879498acd60caaa914d8, type: 3}
   - {fileID: 6509017623133985542, guid: 662783691aee8964facf03b347e7d047, type: 3}
   - {fileID: 6509017623133985542, guid: 4cf9789bcd160774a9ae2c04195972f8, type: 3}
+  - {fileID: 6509017623133985542, guid: b640498c273e43940a34c2a1caa8cb42, type: 3}
   scoreValue: 10
   rb: {fileID: 0}
 --- !u!95 &3159901020700329264
