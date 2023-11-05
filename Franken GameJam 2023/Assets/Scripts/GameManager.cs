@@ -84,5 +84,15 @@ public class GameManager : MonoBehaviour
         maxEnemies *= 2;
     }
 
+    public int GetScore()
+    {
+        return score;
+    }
+
+    public int GetKE()
+    {
+        return killedEnemies;
+    }
+
 
 }
