@@ -25,7 +25,9 @@ public class EnemySpawner : MonoBehaviour
 
     public void Spawn()
     {
-        var enemy = Instantiate<GameObject>(spawnableThing, transform.position, transform.rotation);
+        int rnd = UnityEngine.Random.Range(0, GameManager.instance.enemyPrefabs.Length);
+
+        var enemy = Instantiate<Enemy>(GameManager.instance.enemyPrefabs[rnd].GetComponent<Enemy>(), transform.position, transform.rotation);
         enemy.transform.parent = null; //Evlt. redundant, aber sicher ist sicher
 
         GameManager.instance.currentEnemies++;

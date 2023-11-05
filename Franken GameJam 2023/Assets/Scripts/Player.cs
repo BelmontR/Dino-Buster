@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
             movement += Vector2.right;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && InventoryManager.instance.InventoryKillable())
         {
             axeController.SetActive(false);
             slingShotController.SetActive(false);

@@ -158,7 +158,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 598fc325592629c49b6f39f995d5af8a, type: 3}
-  m_Color: {r: 1, g: 0.38039216, b: 0.38039216, a: 1}
+  m_Color: {r: 0.3803922, g: 0.6251795, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 2477122478419190018}
   - component: {fileID: 3159901020700329264}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemySpeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,8 +197,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8596772292422323664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.89, y: 0.48, z: 0}
-  m_LocalScale: {x: 0.32695758, y: 0.32695758, z: 0.32695758}
+  m_LocalPosition: {x: -7.0054, y: 0.3646, z: 0}
+  m_LocalScale: {x: 0.28187013, y: 0.28187013, z: 0.28187013}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5973288674167498831}
@@ -248,7 +248,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 598fc325592629c49b6f39f995d5af8a, type: 3}
-  m_Color: {r: 1, g: 0.3820755, b: 0.3820755, a: 1}
+  m_Color: {r: 0.3803922, g: 1, b: 0.4570899, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -342,8 +342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f564119f7993804d8823612fc201b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  hp: 5
+  speed: 3.5
+  hp: 3
   strength: 0
   sprite: {fileID: 8124846916860940830}
   dropRate: 0.6

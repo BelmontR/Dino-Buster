@@ -181,4 +181,9 @@ public class InventoryManager : MonoBehaviour
 
     }
 
+    public bool InventoryKillable()
+    {
+        return currentCum >= (maxItemsCum / 2);
+    }
+
 }
