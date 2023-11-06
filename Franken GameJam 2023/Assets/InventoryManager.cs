@@ -177,6 +177,8 @@ public class InventoryManager : MonoBehaviour
         GameManager.instance.KillAllEnemies();
         GameManager.instance.ScaleEnemies(currentCum / maxItemsCum);
 
+        currentCum = 0;
+
         Debug.Log("InvKill 2");
 
 
